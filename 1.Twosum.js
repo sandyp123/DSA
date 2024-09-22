@@ -1,11 +1,11 @@
 var twoSum = function (nums, target) {
  let map = new Map()
-  for(let i of nums){
+  for(let i=0;i<nums.length;i++){
     let comp = target - nums[i];
-    if(map.has(comp)){
-      return [mao[comp],i]
+    if(comp in map){
+      return [map[comp],i]
     }else{
-      map(nums[i])=i;
+      map[nums[i]]=i;
     }
   
  }
